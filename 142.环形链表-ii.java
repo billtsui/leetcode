@@ -25,27 +25,27 @@ public class Solution {
         ListNode meet = null;
         ListNode fast = head;
         ListNode slow = head;
-        
-        while(null != fast){
+
+        while (null != fast) {
             slow = slow.next;
             fast = fast.next;
 
-            if(null == fast){
+            if (null == fast) {
                 break;
             }
 
             fast = fast.next;
 
-            if(fast == slow){
+            if (fast == slow) {
                 meet = fast;
                 break;
             }
         }
 
-        if(null == meet){
+        if (null == meet) {
             return null;
         }
-        
+
         while (null != head && null != meet) {
             if (meet == head) {
                 return head;

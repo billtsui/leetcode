@@ -47,7 +47,7 @@ public class Solution {
         }
 
         while (null != headA && null != headB) {
-            if(headA == headB){
+            if (headA == headB) {
                 return headA;
             }
 

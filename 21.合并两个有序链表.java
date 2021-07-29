@@ -21,21 +21,21 @@ class Solution {
 
         ListNode pointer = head;
 
-        while(null != l1 && null != l2){
-            if(l1.val < l2.val){
+        while (null != l1 && null != l2) {
+            if (l1.val < l2.val) {
                 pointer.next = l1;
-               l1 = l1.next;
-            }else{
+                l1 = l1.next;
+            } else {
                 pointer.next = l2;
                 l2 = l2.next;
             }
             pointer = pointer.next;
         }
-        if(null != l1){
+        if (null != l1) {
             pointer.next = l1;
         }
 
-        if(null != l2){
+        if (null != l2) {
             pointer.next = l2;
         }
 

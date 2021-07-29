@@ -65,39 +65,39 @@ class Solution {
         return result;
     }
 
-    private static int left_bound(int[] nums, int target){
-        int left = 0,right = nums.length - 1;
-        while (left <= right){
-            int middle = left + (right - left)/2;
-            if(nums[middle] == target){
+    private static int left_bound(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        while (left <= right) {
+            int middle = left + (right - left) / 2;
+            if (nums[middle] == target) {
                 right = middle - 1;
-            }else if(nums[middle] > target){
+            } else if (nums[middle] > target) {
                 right = middle - 1;
-            }else if(nums[middle] < target){
+            } else if (nums[middle] < target) {
                 left = middle + 1;
             }
         }
 
-        if(left >= nums.length || nums[left] != target){
+        if (left >= nums.length || nums[left] != target) {
             return -1;
         }
         return left;
     }
 
-    private static int right_bound(int[] nums,int target){
-        int left = 0,right = nums.length - 1;
-        while (left <= right){
-            int middle = left + (right - left)/2;
-            if(nums[middle] == target){
+    private static int right_bound(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        while (left <= right) {
+            int middle = left + (right - left) / 2;
+            if (nums[middle] == target) {
                 left = middle + 1;
-            }else if(nums[middle] > target){
+            } else if (nums[middle] > target) {
                 right = middle - 1;
-            }else if(nums[middle] < target){
+            } else if (nums[middle] < target) {
                 left = middle + 1;
             }
         }
 
-        if(right < 0 || nums[right] != target){
+        if (right < 0 || nums[right] != target) {
             return -1;
         }
         return right;

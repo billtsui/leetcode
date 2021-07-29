@@ -60,14 +60,14 @@ class Solution {
         /**
          * 二分搜索法，找到第一个大于等于target的数即可
          */
-        int left = 0,right = nums.length - 1;
-        while(left <= right){
+        int left = 0, right = nums.length - 1;
+        while (left <= right) {
             int middle = left + (right - left) / 2;
-            if(nums[middle] == target){
+            if (nums[middle] == target) {
                 return middle;
-            }else if(nums[middle] < target){
+            } else if (nums[middle] < target) {
                 left = middle + 1;
-            }else if(nums[middle] > target){
+            } else if (nums[middle] > target) {
                 right = middle - 1;
             }
         }
